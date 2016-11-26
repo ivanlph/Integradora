@@ -1,36 +1,29 @@
 <?php
 		require_once("conexion.php");		
 		try {
-
-
-
-
 			$Nombre = $_POST['usuario'];
-
 			$edad = $_POST['edad'];
-
 			$direccion = $_POST['direccion'];
+			
 
-			if ($_FILES["file"]["error"] > 0)
-    			{
-    			echo "Return Code: " . $_FILES["file"]["error"] . "<br />";
-    			}
-  			else
-    			{   
-    			if (file_exists("../images/" . $_FILES["file"]["name"]))
-      				{
-      				echo $_FILES["file"]["name"] . " already exists. ";
-      				}
-    			else
-      				{
-      				move_uploaded_file($_FILES["file"]["tmp_name"],
-      				"../images/" . $_FILES["file"]["name"]);
-      				echo "Stored in: " . "../images/" . $_FILES["file"]["name"];
-      				$path = "../images/". basename($_FILES["file"]["name"]);
-      				}
-    			}
+			$uploadedfileload="true";
+			$uploadedfile_size=$_FILES['uploadedfile'][size];
+			echo $_FILES[uploadedfile][name];
+			if ($_FILES[uploadedfile][size]>200000)
+			{$msg=$msg."El archivo es mayor que 200KB, debes reduzcirlo antes de subirlo<BR>";
+			$uploadedfileload="false";}
 
-			$sql = "INSERT INTO `productos`( `Nombre`, `Descripcion`, `Precio` , `Imagen`) VALUES ('$Nombre', '$direccion','$edad','$path' )";
+			if (!($_FILES[uploadedfile][type] =="image/pjpeg" OR $_FILES[uploadedfile][type] =="image/gif"))
+			{$msg=$msg." Tu archivo tiene que ser JPG o GIF. Otros archivos no son permitidos<BR>";
+			$uploadedfileload="false";}
+
+			$file_name=$_FILES[uploadedfile][name];
+			$add="../images/" . $file_name;
+
+			move_uploaded_file ($_FILES[uploadedfile][tmp_name], $add);
+
+
+			$sql = "INSERT INTO `productos`( `Nombre`, `Descripcion`, `Precio` , `Imagen`) VALUES ('$Nombre', '$direccion','$edad','$add' )";
 			$conn->exec($sql);
 
 			$conn = null;
@@ -43,7 +36,7 @@
 			</div>
 			<?php
 			echo "alerta();";
-			header("Location: ../php/altasProductos.php");
+			header("Location: ../php/productosAdmin.php");
 		}
 		 catch (Exception $e) {
 			echo "error" . $e;

@@ -43,7 +43,7 @@
 		</div>
 		<div class="col-sm-4 col-md-4 col-xs-2"></div>
 	</div>
-	<form class = "form" role = "form" method = "post" action = "../crud/agregarProductos.php">
+	<form class = "form" enctype="multipart/form-data" role = "form" method = "post" action = "../crud/agregarProductos.php">
 		<div class="form-group">
   			<label style="color: #A09999;">Nombre:</label>
   			<input type="text" name="usuario" class="form-control" required = "">
@@ -59,7 +59,7 @@
 		
 		<div class="form-group">
 			<label class="control-label" style="color: #A09999;" for="Imagen">Cargar imagen</label>
-			<span class="filestyle"><input type="file"></span>
+			<input name="uploadedfile" type="file" />
 		</div>
 
 		<div class="form-group">
