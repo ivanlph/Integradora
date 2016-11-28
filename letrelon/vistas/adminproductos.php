@@ -1,45 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>Productos</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="../js/jquery.min.js"></script>
-  <script src="../js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="../css/base.css">
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
-
-</head>
-<body>
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Letrelon</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="#">Acerca de nosotros</a></li>
-        <li class="active"><a href="./productos.php">Nuestros productos</a></li>
-        <li><a href="#">Contactanos</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
 <br><br>
 <div class="container">
 <div class="row">
 
-<form class = "form" enctype="multipart/form-data" role = "form" method = "post" action = "../crud/agregarProductos.php">
+<form class = "form" enctype="multipart/form-data" role = "form" method = "post" action = "controladores/agregarProductos.php">
     
     <div class=" col-xs-12 col-lg-4 col-md-4 col-sm-6">
       <div class="panel panel-primary">
@@ -99,7 +62,7 @@
         <div class="panel-heading" name "<?php echo $idProducto ?>"><?php echo $Nombre; ?>
           <a action = "" class="close" aria-label="close">&times;</a>
         </div>
-        <div class="panel-body"><img src="<?php echo $imagen;?>" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-body"><img src="<?php echo 'recursos/' . $imagen;?>" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer"><?php echo $Descripcion . " " .  $Precio . "$"; ?></div>
       </div>
     </div>
@@ -115,6 +78,4 @@
 </div><br>
 <div class="container">
   <a  style = "color:#8BC34A;" href="./altasProductos.php">Agregar</a>
-</div>    
-</body>
-</html>
+</div>

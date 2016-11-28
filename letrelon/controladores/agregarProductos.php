@@ -1,5 +1,5 @@
 <?php
-		require_once("conexion.php");		
+		require_once("../modelos/conexion.php");		
 		try {
 			$Nombre = $_POST['usuario'];
 			$edad = $_POST['edad'];
@@ -10,7 +10,7 @@
 			$uploadedfile_size=$_FILES['uploadedfile'][size];
 			echo $_FILES[uploadedfile][name];
 			if ($_FILES[uploadedfile][size]>200000)
-			{$msg=$msg."El archivo es mayor que 200KB, debes reduzcirlo antes de subirlo<BR>";
+			{$msg=$msg."El archivo es mayor que 200KB, debes reducirlo antes de subirlo<BR>";
 			$uploadedfileload="false";}
 
 			if (!($_FILES[uploadedfile][type] =="image/pjpeg" OR $_FILES[uploadedfile][type] =="image/gif"))
@@ -18,7 +18,7 @@
 			$uploadedfileload="false";}
 
 			$file_name=$_FILES[uploadedfile][name];
-			$add="../images/" . $file_name;
+			$add="../recursos/images/" . $file_name;
 
 			move_uploaded_file ($_FILES[uploadedfile][tmp_name], $add);
 
@@ -36,7 +36,7 @@
 			</div>
 			<?php
 			echo "alerta();";
-			header("Location: ../php/productosAdmin.php");
+			header("Location: ../index.php?ver=administrar-productos");
 		}
 		 catch (Exception $e) {
 			echo "error" . $e;
