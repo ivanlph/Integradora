@@ -1,10 +1,11 @@
 <?php
-		require_once("../modelos/conexion.php");		
+		require_once("../modelos/conexion.php");	// Llama al archivo que hace la conexion a la base de datos	
 		try {
-			$Nombre = $_POST['usuario'];
-			$edad = $_POST['edad'];
-			$direccion = $_POST['direccion'];
+			$Nombre = $_POST['usuario']; // captura el texto del input nombre
+			$edad = $_POST['edad'];  //captura el texto del input precio
+			$direccion = $_POST['direccion']; //captura el texto del input descripcion
 			
+			//codigo para guardar la imagen seleccionada en la base de datos y el servidor 
 
 			$uploadedfileload="true";
 			$uploadedfile_size=$_FILES['uploadedfile'][size];
@@ -22,6 +23,7 @@
 
 			move_uploaded_file ($_FILES[uploadedfile][tmp_name], $add);
 
+			// query para mandar los datos a la base de datos 
 
 			$sql = "INSERT INTO `productos`( `Nombre`, `Descripcion`, `Precio` , `Imagen`) VALUES ('$Nombre', '$direccion','$edad','$add' )";
 			$conn->exec($sql);
@@ -35,8 +37,11 @@
 				</div>
 			</div>
 			<?php
-			echo "alerta();";
+
+			// te redirecciona al index
+
 			header("Location: ../index.php?ver=administrar-productos");
+			echo "alerta();";
 		}
 		 catch (Exception $e) {
 			echo "error" . $e;

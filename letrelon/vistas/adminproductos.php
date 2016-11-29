@@ -8,32 +8,31 @@
       <div class="panel panel-primary">
         <div class="panel-heading">
           <div class="form-group">
-            <input type="text" name="usuario" placeholder = "Nombre" class="form-control" required = "">
-
+            <input type="text" name="usuario" placeholder = "Nombre" class="form-control input-sm" required = "">
           </div>
         </div>
         <div class="panel-body">
           <div class="form-group">
-            <label class="control-label" style="color: #A09999;" for="Imagen">Cargar imagen</label>
-            <input name="uploadedfile" type="file" />
+            <div class="containter">
+                <label class="control-label" style="color: #A09999;" for="Imagen">Cargar imagen</label>
+                <input name="uploadedfile" type="file" />
+            </div>
           </div>
         </div>
         <div class="panel-footer">
           <div class="form-group">
-           <input type="text" placeholder = "Descripcion" name="direccion" class="form-control" required = "">
+           <input type="text" placeholder = "Descripcion" name="direccion" class="form-control input-sm" required = "">
           </div>
           <div class="form-group">
-            <input type="text" name="edad" placeholder = "Precio" class="form-control" required = "">
+            <input type="text" name="edad" placeholder = "Precio" class="form-control input-sm" required = "">
           </div>
           <div class="form-group">
-            <button type="submit" class="btn btn-success">Agregar producto</button> 
+            <button type="submit" class="btn btn-success btn-sm">Agregar producto</button> 
           </div>
         </div>
       </div>
     </div>
-
-
-  </form>
+</form>
     
 
   <?php 
@@ -74,8 +73,3 @@
       echo "error" . $e;
     } 
   ?>
-
-</div><br>
-<div class="container">
-  <a  style = "color:#8BC34A;" href="./altasProductos.php">Agregar</a>
-</div>
