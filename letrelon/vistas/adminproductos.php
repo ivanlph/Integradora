@@ -56,7 +56,7 @@
          $imagen = $row['Imagen'];
          ?>
   
-    <div class=" col-xs-12 col-lg-4 col-md-4 col-sm-6">
+    <div class="col-xs-12 col-lg-4 col-md-4 col-sm-6">
       <div class="panel panel-primary">
         <div class="panel-heading" name "<?php echo $idProducto ?>"><?php echo $Nombre; ?>
           <a action = "" class="close" aria-label="close">&times;</a>
