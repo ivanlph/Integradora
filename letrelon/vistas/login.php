@@ -2,7 +2,7 @@
   <center>
     <div class="jumbotron" style="background-color: #333;">
       <div class="page-header">
-        <h1>*Logo letrelon*</h1>
+        <img src="./recursos/images/logo.png" class = "img-responsive img-rounded" alt="">
       </div>
       
       <p>Iniciar con fabebook.</p> 
@@ -15,8 +15,8 @@
       <p>o</p> 
 
       <div class="row">
-        <div class="col-sm-3 col-lg-4 col-md-3"></div>
-        <div class="col-sm-6 col-lg-4 col-md-6">
+        <div class=" col-xs-2 col-sm-2 col-lg-3 col-md-2"></div>
+        <div class="col-xs-8 col-sm-8 col-lg-6 col-md-8">
           <form>
             <div class="form-group">
               <input type="text" class="form-control input-md"  placeholder = "Nombre de usuario o dirección de correo electrónico" id="nombre">
@@ -33,7 +33,7 @@
             </div>
           </form>              
         </div>
-        <div class="col-sm-3 col-lg-4 col-md-3"></div>
+        <div class="col-xs-2 col-sm-2 col-lg-3 col-md-2"></div>
       </div>
       <br><br>  
       <div>
