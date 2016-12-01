@@ -14,8 +14,10 @@
         <div class="panel-body">
           <div class="form-group">
             <div class="containter">
+              <center>
                 <label class="control-label" style="color: #A09999;" for="Imagen">Cargar imagen</label>
-                <input name="uploadedfile" type="file" />
+                <input name="uploadedfile" type="file" />                
+              </center>
             </div>
           </div>
         </div>
@@ -27,7 +29,9 @@
             <input type="text" name="edad" placeholder = "Precio" class="form-control input-sm" required = "">
           </div>
           <div class="form-group">
+            <center>
             <button type="submit" class="btn btn-success btn-sm">Agregar producto</button> 
+            </center>
           </div>
         </div>
       </div>

@@ -18,9 +18,15 @@
 
 				case 'administrar-productos':
 					include_once './vistas/adminproductos.php';
+					break;
 
 				case 'signup':
 					include_once './vistas/signup.php';
+					break;
+
+				case 'login':
+					include_once './vistas/login.php';
+					break;
 
 				default:
 					include_once './vistas/error.html';

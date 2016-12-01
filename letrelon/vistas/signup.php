@@ -1,8 +1,60 @@
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1836101749980506',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<script>
+  
+FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+});
+
+
+{
+    status: 'connected',
+    authResponse: {
+        accessToken: '...',
+        expiresIn:'...',
+        signedRequest:'...',
+        userID:'...'
+    }
+}
+
+
+function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+}
+</script>
+
+
 <div class="container">
   <center>
     <div class="jumbotron" style="background-color: #333;">
-      <h1>Se nuestro cliente</h1> 
-      <p>Registrate aquí.</p> 
+      <h1>Se nuestro cliente</h1>
+
+      <p>Registrate con facebbok.</p> 
+
+      <fb:login-button 
+        scope="public_profile,email"
+        onlogin="checkLoginState();">
+      </fb:login-button>
+      <p>o</p> 
+      <p>Registrate con tu correo</p> 
       <a href=""></a>
       <div class="row">
         <div class="col-sm-3 col-lg-4 col-md-3"></div>
