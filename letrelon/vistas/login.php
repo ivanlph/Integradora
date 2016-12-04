@@ -1,8 +1,9 @@
+`<br><br>
 <div class="container">
   <center>
     <div class="jumbotron" style="background-color: #333;">
       <div class="page-header">
-        <img src="./recursos/images/logo.png" class = "img-responsive img-rounded" alt="">
+        <img src="./recursos/images/logo1.png" class = "img-responsive img-rounded" alt="">
       </div>
       
       <p>Iniciar con fabebook.</p> 

@@ -1,5 +1,9 @@
 <br><br>
 <div class="container">
+
+  
+
+
 <div class="row">
   <?php 
 
@@ -28,7 +32,6 @@
         <div class="panel-footer"><?php echo $Descripcion . " " .  $Precio . "$"; ?></div>
       </div>
     </div>
-    <p></p>
 
         <?php
        }}

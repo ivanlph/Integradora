@@ -47,12 +47,13 @@ function checkLoginState() {
     <div class="jumbotron" style="background-color: #333;">
       <h1>Se nuestro cliente</h1>
 
-      <p>Registrate con facebbok.</p> 
+      <p>Registrate con Facebook.</p> 
 
       <fb:login-button 
         scope="public_profile,email"
         onlogin="checkLoginState();">
       </fb:login-button>
+      <br><br>
       <p>o</p> 
       <p>Registrate con tu correo</p> 
       <a href=""></a>

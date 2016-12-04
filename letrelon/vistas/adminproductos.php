@@ -6,7 +6,7 @@
     
     <div class=" col-xs-12 col-lg-4 col-md-4 col-sm-6">
       <div class="panel panel-primary">
-        <div class="panel-heading">
+        <div class="panel-heading" style="padding-bottom: 2px; border-bottom-width: 0px;">
           <div class="form-group">
             <input type="text" name="usuario" placeholder = "Nombre" class="form-control input-sm" required = "">
           </div>
@@ -37,7 +37,8 @@
       </div>
     </div>
 </form>
-    
+
+   
 
   <?php 
 
@@ -63,17 +64,16 @@
     <div class="col-xs-12 col-lg-4 col-md-4 col-sm-6">
       <div class="panel panel-primary">
         <div class="panel-heading" name "<?php echo $idProducto ?>"><?php echo $Nombre; ?>
-          <a action = "" class="close" aria-label="close">&times;</a>
+          <a href="eliminarProductos.php?eliminar=<?php echo $idProducto; ?>" class="close" aria-label="close">&times;</a>
         </div>
         <div class="panel-body"><img src="<?php echo 'recursos/' . $imagen;?>" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer"><?php echo $Descripcion . " " .  $Precio . "$"; ?></div>
       </div>
     </div>
-    <p></p>
 
         <?php
        }}
     catch (Exception $e) {
       echo "error" . $e;
     } 
-  ?>
+ ?>

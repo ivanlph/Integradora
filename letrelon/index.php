@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="recursos/css/base.css">
   <link rel="stylesheet" href="recursos/css/bootstrap.min.css">
 </head>
-<body id = "a">
+<body id = "a" background = "./recursos/images/malla.jpg">
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">

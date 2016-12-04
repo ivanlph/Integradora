@@ -28,9 +28,15 @@
 					include_once './vistas/login.php';
 					break;
 
+				case 'nosotros':
+					include_once './vistas/nosotros.php';
+					break;
+
 				default:
 					include_once './vistas/error.html';
 					break;
+
+
 			}
 
 		}
