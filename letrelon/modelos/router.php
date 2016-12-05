@@ -32,6 +32,13 @@
 					include_once './vistas/nosotros.php';
 					break;
 
+				case 'carrito':
+					include_once './vistas/carritoDeCompras.php';
+					break;
+
+				
+
+
 				default:
 					include_once './vistas/error.html';
 					break;
