@@ -1,10 +1,4 @@
 
-<?php 
-
-session_start();
-
-?>
-
 <div class="container">
 
   <h2>Carrito de compras</h2>
