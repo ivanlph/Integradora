@@ -29,7 +29,7 @@
       <div class="panel panel-primary">
         <div class="panel-heading"><?php echo $Nombre; ?></div>
         <div class="panel-body"><img src="<?php echo 'vistas/' . $imagen;?>" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer"><?php echo $Descripcion . " " .  $Precio . "$"; ?></div>
+        <div class="panel-footer"><?php echo $Descripcion . " " .  $Precio . "$"; ?><button type="button" class="btn btn-success">Agregar al carrito</button></div>
       </div>
     </div>
 

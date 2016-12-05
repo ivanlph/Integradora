@@ -1,30 +1,19 @@
 <?php 
-	class productos {
+	require_once("../modelos/conexion.php");
+	    
+	    try {
+		$prod = $_GET['eliminar'];
+	    $sql = "DELETE FROM `productos` WHERE idProducto = " . $prod;
 
-		$idProd = isset($_GET['eliminar']);
+	    if ($conn->exec($sql)){
+	    	$conn = null;
+	      	header("Location: ../index.php?ver=administrar-productos");
+	    }
 
-		function eliminarProductos($idProd){
-
-
-		require_once("../modelos/conexion.php");
-		    
-		    try {
-
-		      $idProd = $_GET['eliminar'];
-
-		      $sql = 'DELETE FROM `productos` WHERE idProducto = $idProd';
-		      $conn->exec($sql);
-
-		      $conn = null;
-
-		      header("Location: ../index.php?ver=administrar-productos");
-		      
-		      }
-		      
-		    catch (Exception $e) {
-		      echo "error" . $e;
-		     }
-		    }
-		  }
-		}
+	    $conn = null;
+	    }
+	      
+	    catch (Exception $e) {
+	      echo "error" . $e;
+	     }
  ?>
