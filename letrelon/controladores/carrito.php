@@ -2,12 +2,11 @@
 
 session_start();
 
-	$id = $_GET['idProd'];
+	
 
 	if(isset($_SESSION['carrito'])){
 
-
-
+		$id = $_GET['idProd'];
 		$carrito = $_SESSION['carrito'];
 		$existe = false;
 		$pocicion = 0;
@@ -24,11 +23,15 @@ session_start();
 
 			$carrito[$pocicion]['Cantidad'] ++ ;
 			$_SESSION['carrito'] = $carrito;
+			header("Location: ../index.php?ver=carrito");
 		}
+	
+
+
 	}
 
 	else{
-
+		$id = $_GET['idProd'];
 		include '../modelos/conexion.php';
 
 		$sql = "SELECT * FROM `productos` WHERE `idProducto` = " . $id;
@@ -51,7 +54,11 @@ session_start();
         	'Cantidad' => 1 );
 
         $_SESSION['carrito'] = $carrito;
+        header("Location: ../index.php?ver=carrito");
 
 	}
+
+		echo "<center><h2>Error inesperado</h2></center>"
+	
 
  ?>

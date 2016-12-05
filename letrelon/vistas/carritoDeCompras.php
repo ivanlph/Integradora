@@ -3,7 +3,18 @@
 
   <h2>Carrito de compras</h2>
          
-  <table class="table table-bordered">
+  
+
+      <?php 
+
+      if(isset($_SESSION['carrito']))
+      {
+
+        include './controladores/carrito.php';
+
+        ?>
+
+        <table class="table table-bordered">
 
     <thead>
       <tr>
@@ -17,13 +28,7 @@
 
     <tbody>
 
-      <?php 
-
-      if(isset($_SESSION['carrito']))
-      {
-
-
-        include './controladores/carrito.php';
+      <?php
 
         for ($i=0; $i < count ($carrito); $i++) {
 
