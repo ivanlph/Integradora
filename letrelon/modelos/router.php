@@ -28,10 +28,6 @@
 					include_once './vistas/login.php';
 					break;
 
-				case 'nosotros':
-					include_once './vistas/nosotros.php';
-					break;
-
 				case 'carrito':
 					include_once './vistas/carritoDeCompras.php';
 					break;

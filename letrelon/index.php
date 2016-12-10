@@ -32,7 +32,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
-        <li><a href="index.php?ver=carrito"><span class="glyphicon glyphicon-shopping-cart"></span><span class="badge">5</span></a></li>
+        <li><a href="index.php?ver=carrito"><span class="glyphicon glyphicon-shopping-cart"></span><span class="badge"><?php echo 0; ?></span></a></li>
         <li><a href="index.php?ver=signup"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>

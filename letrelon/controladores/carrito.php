@@ -1,15 +1,16 @@
+<?php
+	$id = $_GET['idProd'];
+?>
+
 <?php 
 
-session_start();
-
-	
 
 	if(isset($_SESSION['carrito'])){
 
-		$id = $_GET['idProd'];
+
 		$carrito = $_SESSION['carrito'];
 		$existe = false;
-		$pocicion = 0;
+		$posicion = 0;
 
 		for ($i=0; $i < count ($carrito); $i++) {
 
@@ -21,22 +22,25 @@ session_start();
 
 		if ($existe == true) {
 
-			$carrito[$pocicion]['Cantidad'] ++ ;
+			$carrito[$posicion]['Cantidad'] ++ ;
 			$_SESSION['carrito'] = $carrito;
 			header("Location: ../index.php?ver=carrito");
 		}
-	
 
 
 	}
 
 	else{
+		
 		$id = $_GET['idProd'];
-		include '../modelos/conexion.php';
 
+		include '../modelos/conexion.php';
+		$con = new Conexion();
+		$con = $con->getCon();
+		
 		$sql = "SELECT * FROM `productos` WHERE `idProducto` = " . $id;
 
-		foreach ($conn->query($sql) as $row) {
+		foreach ($con->query($sql) as $row) {
 
 			$idProducto = $row['idProducto'];
     	    $Nombre = $row['Nombre'];
@@ -54,11 +58,12 @@ session_start();
         	'Cantidad' => 1 );
 
         $_SESSION['carrito'] = $carrito;
+        return $carrito;
         header("Location: ../index.php?ver=carrito");
 
 	}
 
-		echo "<center><h2>Error inesperado</h2></center>"
+#		echo "<center><h2>Error inesperado</h2></center>"
 	
 
  ?>

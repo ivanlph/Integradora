@@ -1,12 +1,12 @@
-
-<div class="container">
+<br><br>
+<div class="container" style="background-color: #212121;">
 
   <h2>Carrito de compras</h2>
          
   
 
       <?php 
-
+      session_start();
       if(isset($_SESSION['carrito']))
       {
 

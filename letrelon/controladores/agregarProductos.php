@@ -1,6 +1,10 @@
 <?php
 		require_once("../modelos/conexion.php");	// Llama al archivo que hace la conexion a la base de datos	
 		try {
+
+			$con =  new Conexion();
+      		$con = $con->getCon();
+
 			$Nombre = $_POST['usuario']; // captura el texto del input nombre
 			$edad = $_POST['edad'];  //captura el texto del input precio
 			$direccion = $_POST['direccion']; //captura el texto del input descripcion
@@ -26,7 +30,7 @@
 			// query para mandar los datos a la base de datos 
 
 			$sql = "INSERT INTO `productos`( `Nombre`, `Descripcion`, `Precio` , `Imagen`) VALUES ('$Nombre', '$direccion','$edad','$add' )";
-			$conn->exec($sql);
+			$con->exec($sql);
 
 			$conn = null;
 			?>
