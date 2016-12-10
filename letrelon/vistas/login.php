@@ -1,4 +1,19 @@
-`<br><br>
+<?php
+
+include_once './modelos/conexion.php';
+
+$con = new Conexion();
+
+$con -> getCon();
+
+session_start();
+
+if(isset($_SESSION['usuario'])){
+  header("Location: ../index.php?ver=inicio");
+}
+
+?>
+<br><br>
 <div class="container">
   <center>
     <div class="jumbotron" style="background-color: #333;">
@@ -6,25 +21,16 @@
         <img src="./recursos/images/logo1.png" class = "img-responsive img-rounded" alt="">
       </div>
       
-      <p>Iniciar con fabebook.</p> 
-
-      <fb:login-button 
-        scope="public_profile,email"
-        onlogin="checkLoginState();">
-      </fb:login-button>
-
-      <p>o</p> 
-
       <div class="row">
         <div class=" col-xs-2 col-sm-2 col-lg-3 col-md-2"></div>
         <div class="col-xs-8 col-sm-8 col-lg-6 col-md-8">
-          <form>
+          <form method = "post" action = "./controladores/validarUsuario.php">
             <div class="form-group">
-              <input type="text" class="form-control input-md"  placeholder = "Nombre de usuario o dirección de correo electrónico" id="nombre">
+              <input type="text" class="form-control input-md"  placeholder = "Nombre de usuario o dirección de correo electrónico" name="nombre">
             </div>
 
             <div class="form-group">
-              <input type="text" class="form-control input-md" placeholder = "Contraseña" id="password">
+              <input type="text" class="form-control input-md" placeholder = "Contraseña" name="password">
             </div> 
             <div class="row">
               <div class="col-sm-12 col-lg-12 col-md-12">
@@ -39,7 +45,7 @@
       <br><br>  
       <div>
         <a href="" style="color: #8bc34a;">¿Olvidaste tu nombre de usuario o contraseña?</a>
-        <h4 style="color: white;">¿No tienes cuenta? <a href="" style="color: #8bc34a;">Regístrate</a>.</h4>
+        <h4 style="color: white;">¿No tienes cuenta? <a href="index.php?ver=signup" style="color: #8bc34a;">Regístrate</a>.</h4>
       </div>
       <div>
         <h6 style="color: white;">Si haces clic en "Acceder con Facebook" y no eres usuario de Letrelon, quedarás registrado y aceptarás los <a href="" style="color: #8bc34a;">términos y condiciones</a> y la </h6>
