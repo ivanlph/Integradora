@@ -1,0 +1,2 @@
+
+CREATE TABLE `letrelom`.`usuarios` ( `idUsr` INT NOT NULL AUTO_INCREMENT , `Nombre` TEXT NOT NULL , `usuario` TEXT NOT NULL , `password` TEXT NOT NULL , `email` TEXT NOT NULL , `tipo` INT NOT NULL DEFAULT '1' , PRIMARY KEY (`idUsr`)) ENGINE = InnoDB;
