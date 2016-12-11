@@ -1,4 +1,5 @@
 <?php 
+  $Admin = false;
  session_start();
 if(isset($_SESSION['usuario'])){
     $sesion = $_SESSION['usuario']['Nombre'];
@@ -6,8 +7,9 @@ if(isset($_SESSION['usuario'])){
     $direccion = "logout";
     $icono = "out";
 
+
     if($tipo == 2){
-#Aqui va el codigo para aparecer la opcion de Administrar productos
+    $Admin = true;
 
     }
  }
@@ -44,12 +46,21 @@ else{
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
+        <?php if($Admin){ ?>
+        <li class="active"><a href="index.php?ver=inicio">Inicio</a></li>
+        <li><a href="index.php?ver=nosotros">Acerca de nosotros</a></li>
+        <li><a href="index.php?ver=administrar-productos">Administrar productos</a></li>
+        <li><a href="index.php?ver=contactanos">Contactanos</a></li>
+        <li><a href="index.php?ver=contactanos">Clientes</a></li>
+        <li><a href="index.php?ver=contactanos">Ventas</a></li>
+
+
+        <?php }else{ ?>
         <li class="active"><a href="index.php?ver=inicio">Inicio</a></li>
         <li><a href="index.php?ver=nosotros">Acerca de nosotros</a></li>
         <li><a href="index.php?ver=productos">Nuestros productos</a></li>
         <li><a href="index.php?ver=contactanos">Contactanos</a></li>
-
-        <li><a href="index.php?ver=administrar-productos">Administrar productos</a></li>
+        <?php }?>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -68,7 +79,14 @@ else{
  <?php 
   $router = new Router();
   if(isset($_GET['ver'])){
+    if ($_GET['ver'] == 'logout'){
+      $_SESSION['usuario'] = null;
+      $router->cargarVista('inicio');
+
+    }
+    else{
     $router->cargarVista($_GET['ver']);
+    }
   } else {
     $router->cargarVista('inicio');
   }
