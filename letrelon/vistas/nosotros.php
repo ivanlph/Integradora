@@ -28,7 +28,7 @@ article {
 </style>
 </head>
 <body>
-
+<form class = "form" enctype="multipart/form-data" role = "form" method = "post" action = "vistas/nosotros.php">
 <div class="container">
   
 <nav>
@@ -66,3 +66,4 @@ article {
 </div>
 </body>
 </html>
+</from>
