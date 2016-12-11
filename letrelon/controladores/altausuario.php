@@ -8,7 +8,9 @@
       $usuario = $_POST['usuario'];
       $contrasena = $_POST['password'];
       $correo = $_POST['email'];
-      $correocomp = $_POST['correocomp'];            
+      $correocomp = $_POST['correocomp']; 
+
+                 
 
       $sql = "INSERT INTO `usuarios`( `Nombre`, `usuario`, `password` , `email`) 
       VALUES ('$Nombre', '$usuario','$contrasena','$correo' )";

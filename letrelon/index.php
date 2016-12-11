@@ -51,8 +51,8 @@ else{
         <li><a href="index.php?ver=nosotros">Acerca de nosotros</a></li>
         <li><a href="index.php?ver=administrar-productos">Administrar productos</a></li>
         <li><a href="index.php?ver=contactanos">Contactanos</a></li>
-        <li><a href="index.php?ver=contactanos">Clientes</a></li>
-        <li><a href="index.php?ver=contactanos">Ventas</a></li>
+        <li><a href="index.php?ver=clientes">Clientes</a></li>
+        <li><a href="index.php?ver=ventas">Ventas</a></li>
 
 
         <?php }else{ ?>

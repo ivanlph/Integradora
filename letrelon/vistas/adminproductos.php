@@ -50,8 +50,7 @@
 
       $sql = 'SELECT * FROM productos order by idProducto desc';
         
-      foreach ($conn->query($sql) as $row) {
-        $idProducto = $row['idProducto'];
+
          $Nombre = $row['Nombre'];
          $Descripcion = $row['Descripcion'];
          $Precio = $row['Precio'];
