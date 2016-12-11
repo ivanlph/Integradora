@@ -1,32 +1,5 @@
-<!DOCTYPE html>
+
 <html>
-<head>
-<style>
-
-nav {
-    float: left;
-    max-width: 160px;
-    margin: 0;
-    padding: 1em;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-   
-nav ul a {
-    text-decoration: none;
-}
-
-article {
-    margin-left: 170px;
-    border-left: 1px blue;
-    padding: 1em;
-    overflow: hidden;
-}
-</style>
-</head>
 <body>
 <form class = "form" enctype="multipart/form-data" role = "form" method = "post" action = "vistas/nosotros.php">
 <div class="container">
@@ -44,7 +17,7 @@ article {
   <p>Con la ventaja de que tambi&eacute;n es una imprenta, hacen camisetas a tu preferencia,tazas,calcomanias, brinca brinca y muchas cosas m&aacute;s &#9829;.</p>
 </article>
 
-   <!-- <aside role="complementary">-->
+    <aside role="complementary">
 
         <div class="col" id="col3">
           <h6>OBJETIVO</h6><br />
@@ -54,12 +27,12 @@ article {
             <br />
             <h6>MISION</h6><br />
             <br />
-            aqui pondria la mision<br />
+            Distribuir los productos y servicios de la mejor calidad al mejor precio<br />
             <br />
             <br />
             <h6>VISION</h6><br />
             <br />
-            aqui podria ir la vision<br />
+            Se visualiza que la empresa se estabilice en muchas partes de la república Mexicana, con los mejores materiales, precios y mano de obra para hacer de tus necesidades nuestra arte <br />
             <br />
             <br />
           </div>
