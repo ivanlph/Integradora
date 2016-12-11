@@ -15,9 +15,9 @@ class Validacion{
 
 	public function validarUsuario($usuario,$contraseña){
 
-		$sql = $this->con->prepare("SELECT * FROM `usuarios` WHERE (
-		(`usuario` =? AND `password` =?) or 
-		(`email` =? and `password` =?))");
+		$sql = $this->con->prepare("SELECT * FROM  `usuarios` 
+				WHERE ((`usuario` =  '$usuario'AND  `password` =  '$contraseña')OR 
+					(`email` =  '$usuario' AND  `password` =  '$contraseña'))");
 		$sql ->bindParam(1, $usuario);
 		$sql ->bindParam(2, $contraseña);
 		$sql ->bindParam(3, $usuario);
