@@ -32,7 +32,9 @@
 					include_once './vistas/carritoDeCompras.php';
 					break;
 
-				
+				case 'nosotros':
+					include_once './vistas/nosotros.php';
+					break;
 
 
 				default:
