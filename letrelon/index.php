@@ -1,3 +1,23 @@
+<?php 
+ session_start();
+if(isset($_SESSION['usuario'])){
+    $sesion = $_SESSION['usuario']['Nombre'];
+    $tipo = $_SESSION['usuario']['tipo'];
+    $direccion = "logout";
+    $icono = "out";
+
+    if($tipo == 2){
+#Aqui va el codigo para aparecer la opcion de Administrar productos
+
+    }
+ }
+else{
+    $sesion = "Iniciar sesion";
+    $direccion = "login";
+    $icono = "in";
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,12 +48,14 @@
         <li><a href="index.php?ver=nosotros">Acerca de nosotros</a></li>
         <li><a href="index.php?ver=productos">Nuestros productos</a></li>
         <li><a href="index.php?ver=contactanos">Contactanos</a></li>
+
         <li><a href="index.php?ver=administrar-productos">Administrar productos</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
         <li><a href="index.php?ver=carrito"><span class="glyphicon glyphicon-shopping-cart"></span><span class="badge"><?php echo 0; ?></span></a></li>
-        <li><a href="index.php?ver=login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+        <li><a href="index.php?ver=<?php echo $direccion ?>"><span class="glyphicon glyphicon-log-<?php echo $icono ?>"></span> <?php echo $sesion ?></a></li>
       </ul>
     </div>
   </div>
