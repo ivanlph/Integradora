@@ -1,3 +1,18 @@
+<?php 
+if(isset($_SESSION['usuario'])){
+
+    $tipo = $_SESSION['usuario']['tipo'];
+
+    if($tipo == 2){
+    header('./index.php?ver=productos');
+
+    }
+ }
+ else{
+    header('./index.php?ver=productos');
+ }
+?>
+
 <br><br>
 <div class="container">
 <div class="row">
@@ -28,6 +43,21 @@
           <div class="form-group">
             <input type="text" name="edad" placeholder = "Precio" class="form-control input-sm" required = "">
           </div>
+
+          <div class="form-group">
+            <select class="form-control input-sm" name = "categoria">
+              <option value = "">Categoría</option>
+              <option value = "lona">Lonas</option>
+              <option value = "malla">Mallas</option>
+              <option value = "calca">Calcomanías</option>
+              <option value = "Camisetas">Camisetas</option>
+              <option value = "Gorras">Gorras</option>
+              <option value = "tabloide">Tabloides</option>
+              <option value = "tarjetas">Tarjetas</option>
+              <option value = "monederos">Monederos</option>
+            </select>
+          </div>
+
           <div class="form-group">
             <center>
             <button type="submit" class="btn btn-success btn-sm">Agregar producto</button> 
@@ -50,7 +80,8 @@
 
       $sql = 'SELECT * FROM productos order by idProducto desc';
         
-
+      foreach ($conn->query($sql) as $row) {
+         $idProducto = $row['idProducto'];
          $Nombre = $row['Nombre'];
          $Descripcion = $row['Descripcion'];
          $Precio = $row['Precio'];
