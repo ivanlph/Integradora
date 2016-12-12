@@ -8,7 +8,7 @@
 			$Nombre = $_POST['usuario']; // captura el texto del input nombre
 			$edad = $_POST['edad'];  //captura el texto del input precio
 			$direccion = $_POST['direccion']; //captura el texto del input descripcion
-			
+			$categoria = $_POST['categoria'];
 			//codigo para guardar la imagen seleccionada en la base de datos y el servidor 
 
 			$uploadedfileload="true";
@@ -29,7 +29,7 @@
 
 			// query para mandar los datos a la base de datos 
 
-			$sql = "INSERT INTO `productos`( `Nombre`, `Descripcion`, `Precio` , `Imagen`) VALUES ('$Nombre', '$direccion','$edad','$add' )";
+			$sql = "INSERT INTO `productos`( `Nombre`, `Descripcion`, `Precio` , `Imagen`,`Categoria` ) VALUES ('$Nombre', '$direccion','$edad','$add', '$categoria' )";
 			$con->exec($sql);
 
 			$conn = null;

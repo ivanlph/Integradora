@@ -28,8 +28,9 @@
           </div>
 </div>
 </article>
+
 <div class="jumbotron" style="background-color:#333;">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d239.82898813008796!2d-114.78822776649783!3d32.44940008016894!2m2!1f124.07081211360268!2f41.69361367845907!3m2!1i1024!2i768!4f20!3m3!1m2!1s0x0%3A0x5ce916e95ef8ab34!2sLetreros+Y+Lonas!5e1!3m2!1ses-419!2sus!4v1481488191941" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
-          
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1684.9070055866841!2d-114.78598279074778!3d32.44850023401368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5ce916e95ef8ab34!2sLetreros+Y+Lonas!5e0!3m2!1ses!2sus!4v1481559526941" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
 </div>

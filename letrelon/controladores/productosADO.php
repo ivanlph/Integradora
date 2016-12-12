@@ -5,8 +5,13 @@
 	
 	class producto {
 
-		function eliminarProducto($idProducto){
-			$con = $con->getCon();
+		public function __construct(){
+
+		$this->con = new Conexion();
+		$this->con = $this->con->getCon();
+	}
+
+	public	function eliminarProducto($idProducto){
 			try {
 				$prod = $_GET['eliminar'];
 	    		$sql = "DELETE FROM `productos` WHERE idProducto = " . $prod;
@@ -26,8 +31,7 @@
 
 		function agregarProducto(){
 
-			$con = $con->getCon();
-			
+	
 			$Nombre = $_POST['usuario'];
 			$edad = $_POST['edad']; 
 			$direccion = $_POST['direccion']; 
@@ -62,11 +66,9 @@
 		 
 		}
 
-		function ontenerProducto(){
+		function obtenerProducto(){
 			
 			try {	
-      			$conn = $con->getCon();
-
 				$sql = 'SELECT * FROM productos order by idProducto desc';
         
 		      	foreach ($conn->query($sql) as $row) {
