@@ -5,26 +5,26 @@
   <div class="jumbotron" style="background-color:#333;">
 <article>
   <h1>Letrelon</h1>
-  <p><font color="white" size=4>Letrelon es una empresa dedicada a dar los servicios de instalaci&oacute;n de mallasombras como su especialidad.</font></p>
-  <p><font color="white" size=4> Con la ventaja de que tambi&eacute;n es una imprenta, hacen camisetas a tu preferencia,tazas,calcomanias, brinca brinca y muchas cosas m&aacute;s &#9829;.</font></p>
+  <p><font color="white" size=4>Somos una empresa dedicada a la Fabricación y Comercialización de Artículos publicitarios, que desde 1985 lideramos en el mercado, nuestros años de experiencia en el rubro, han logrado que nos consolidemos como la mejor alternativa de publicidad empresarial.</font></p>
+  <p><font color="white" size=4></font></p>
 </div>
 <div class="jumbotron" style="background-color:#333;">
         <div class="col" id="col3">
           <h2>OBJETIVO</h2><br />
             <br />
-            <font color="white" size=4>aqui va el objetivo</font><br />
-            <br />
-            <br />
+            <font color="white" size=4>Generar una clientela contenta  mas extensa y cómodamente, con los mejores precios y servicios.</font><br />
+            <br>
+
             <h2>MISION</h2><br />
-            <br />
-            <font color="white" size=4>Distribuir los productos y servicios de la mejor calidad al mejor precio</font><br />
-            <br />
-            <br />
+            <br>
+            <font color="white" size=4>Distribuir los productos y servicios de la mejor calidad al mejor precio.</font><br />
+            <br>
+
             <h2>VISION</h2><br />
-            <br />
+            <br>
             <font color="white" size=4> Se visualiza que la empresa se estabilice en muchas partes de la república Mexicana, con los mejores materiales, precios y mano de obra para hacer de tus necesidades nuestra arte</font><br />
-            <br />
-            <br />
+            <br>
+
           </div>
 </div>
 </article>

@@ -53,6 +53,7 @@ else{
         <li><a href="index.php?ver=contactanos">Contactanos</a></li>
         <li><a href="index.php?ver=clientes">Clientes</a></li>
         <li><a href="index.php?ver=ventas">Ventas</a></li>
+        <li><a href="index.php?ver=galeria">Galeria</a></li>
 
 
         <?php }else{ ?>
@@ -60,6 +61,7 @@ else{
         <li><a href="index.php?ver=nosotros">Acerca de nosotros</a></li>
         <li><a href="index.php?ver=productos">Nuestros productos</a></li>
         <li><a href="index.php?ver=contactanos">Contactanos</a></li>
+        <li><a href="index.php?ver=galeria">Galeria</a></li>
         <?php }?>
       </ul>
       <ul class="nav navbar-nav navbar-right">

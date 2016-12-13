@@ -1,12 +1,16 @@
 <?php
-	$id = $_GET['idProd'];
+	if(isset($_GET['idProd'])){
+		$id = $_GET['idProd'];
+		return $id;
+		header("Location: ../index.php?ver=carrito");
+	}
+
 ?>
 
-<?php 
-
-
+<?php
+	session_start();
+	$existe = false;
 	if(isset($_SESSION['carrito'])){
-
 
 		$carrito = $_SESSION['carrito'];
 		$existe = false;
@@ -19,7 +23,6 @@
 				$pocicion = $i;
 			}
 		}
-
 		if ($existe == true) {
 
 			$carrito[$posicion]['Cantidad'] ++ ;
@@ -27,13 +30,13 @@
 			header("Location: ../index.php?ver=carrito");
 		}
 
+		else{
+			$id = $_GET['idProd'];
+		}
 
 	}
 
-	else{
-		
-		$id = $_GET['idProd'];
-
+	else if($existe == false){
 		include '../modelos/conexion.php';
 		$con = new Conexion();
 		$con = $con->getCon();
@@ -59,7 +62,7 @@
 
         $_SESSION['carrito'] = $carrito;
         return $carrito;
-        header("Location: ../index.php?ver=carrito");
+        header("Location: ./index.php?ver=carrito");
 
 	}
 

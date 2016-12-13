@@ -36,10 +36,14 @@
 					include_once './vistas/nosotros.php';
 					break;
 
+				case 'galeria':
+					include_once './vistas/Galeria.php';
+					break;
 
 				default:
 					include_once './vistas/error.html';
 					break;
+
 
 
 			}

@@ -3,11 +3,7 @@
     $con = new Conexion();
     $conn = $con->getCon();
 ///////////////////////// Variables de consulta ////////////////////////////////////////////
-
     $where = "";
-
-
-    
     if(isset($_POST['Nombre'])){
       $filtroxNom = $_POST['Nombre'];
       $filtroxCat = $_POST['Categoria'];
@@ -17,24 +13,14 @@
       else if(empty($_POST['Nombre'])){
       $where = "WHERE Categoria like '". $filtroxCat ."'";        
       }
-
       else{
-
         $where = "WHERE Descripcion like '". $filtroxNom ."%' and Categoria like '". $filtroxCat ."'";
-
       }
-
-
-
-
     }
-
 //////////////////////// Consulta a la base de datos ///////////////////////////////////////
     $sql = 'SELECT * FROM productos '.$where.' order by idProducto desc';
     $cbox = 'SELECT * FROM productos  group by Categoria';
-
 ?>
-
 <br><br>
 <div class="container">
 <div class="row">
@@ -61,7 +47,6 @@
 <div class="row">
 <?php 
   try {
-         
     foreach ($conn->query($sql) as $row) {
        $idProducto = $row['idProducto'];
        $Nombre = $row['Nombre'];
@@ -69,7 +54,6 @@
        $Precio = $row['Precio'];
        $imagen = $row['Imagen'];
        ?>
-
       <div class=" col-xs-12 col-lg-4 col-md-4 col-sm-6">
         <div class="panel panel-primary">
           <div class="panel-heading"><?php echo $Nombre; ?></div>
@@ -84,12 +68,10 @@
           </div>
         </div>
       </div>
-
       <?php
      }}
   catch (Exception $e) {
     echo "error" . $e;
   } 
 ?>
-
 </div><br>
